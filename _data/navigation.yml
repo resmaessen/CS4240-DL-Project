@@ -4,7 +4,7 @@
   url: /
 
 - title: Group of Things
-  url: /group/
+  url: /
   sublinks:
     - title: Data
-      url: /group/data
+      url: /data
