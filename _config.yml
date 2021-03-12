@@ -1,12 +1,28 @@
 theme: jekyll-theme-minimal
 title: [Reproducibility Project - Deep Fruit Detection in Orchards]
 description: [Project for the course CS4240 - Deep Learning of the TU Delft]
+
+# Conversion
 markdown: kramdown
-docs_list_title: Menue
-docs:
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
-- title: Introduction
-  url: index.md
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
-- title: Data
-  url: data.md
+
+# Collections
+collections:
+  data:
+    output: true
+    permalink: /:collection/:path/
