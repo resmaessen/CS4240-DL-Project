@@ -1,11 +1,5 @@
-theme: jekyll-theme-minimal
 title: [Reproducibility Project - Deep Fruit Detection in Orchards]
-description: [Project for the course CS4240 - Deep Learning of the TU Delft]
-
-plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
-include:
-  - data.md
+description: Minimal is a theme for GitHub Pages.
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-minimal
