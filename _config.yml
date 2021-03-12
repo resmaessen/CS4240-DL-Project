@@ -25,4 +25,4 @@ kramdown:
 collections:
   data:
     output: true
-    permalink: /:collection/:path/
+    permalink: data.md
