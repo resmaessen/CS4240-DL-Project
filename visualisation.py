@@ -11,6 +11,7 @@ from matplotlib.patches import Circle, Rectangle
 import matplotlib.image as img 
 import numpy as np
 
+plt.close('all')
 
 # Import images
 apple_1 = img.imread('apples/images/20130320T004354.277980.Cam6_41.png')
@@ -39,6 +40,7 @@ csv_almond_3='almonds/annotations/fromEast_59_06_IMG_4420_i1200j2100.csv'
 # Apple
 csv_file = list([csv_apple_1, csv_apple_2, csv_apple_3])
 im = list([apple_1, apple_2, apple_3])
+im_name = list(['apple_1', 'apple_2', 'apple_3'])
 
 for j in range(len(csv_file)): 
     data = pd.read_csv(csv_file[j])
@@ -55,13 +57,18 @@ for j in range(len(csv_file)):
     for i in range(len(c_x)):
         circle = Circle((c_x[i], c_y[i]), radius[i], color='r', fill=False)
         ax.add_patch(circle)
+        
+    ax.axes.get_xaxis().set_visible(False)
+    ax.axes.get_yaxis().set_visible(False)
+    fig.savefig('data_visualisation/'+im_name[j]+'.png')
     
     plt.show()
 
 
 # Mango & Almond
-csv_file = list([csv_mango_1, csv_mango_2, csv_mango_3, csv_almond_1, csv_almond_2, csv_almond_3]) 
+csv_file = list([csv_mango_1, csv_mango_2, csv_mango_3, csv_almond_1, csv_almond_2, csv_almond_3])
 im = list([mango_1, mango_2, mango_3, almond_1, almond_2, almond_3]) 
+im_name = list(['mango_1', 'mango_2', 'mango_3', 'almond_1', 'almond_2', 'almond_3'])
 
 for j in range(len(csv_file)):
     data = pd.read_csv(csv_file[j])
@@ -79,4 +86,10 @@ for j in range(len(csv_file)):
         rectangle = Rectangle((x[i],y[i]), dx[i], dy[i], color='r', fill=False)
         ax.add_patch(rectangle)
     
+    ax.axes.get_xaxis().set_visible(False)
+    ax.axes.get_yaxis().set_visible(False)
+    fig.savefig('data_visualisation/'+im_name[j]+'.png')
+    
     plt.show()
+    
+    
